@@ -1,18 +1,20 @@
 <div ng-controller="PostsCtrlAjax">
-    <div ng-repeat="allwidg in widgets ">
-        <div ng-repeat="wid in allwidg" class="box | groupBy: {{wid.type}} ">
-            <ul ng-class="{'warning': wid.type == 'Critical', 'major': wid.type == 'Major'} ">
-                <h2>
-                    Type: {{wid.type}}
-                </h2>
-                <li>
-                    <p>
-                        {{wid.time}}
-                    </p>
-                    <h4>
-                        Name: {{wid.name}}
-                    </h4>
-                    <p>
+	<!--<div ng-repeat="allwidg in widgets ">-->
+	<!--<div ng-repeat="wid in allwidg" class="box | groupBy: {{wid.type}} ">-->
+	<div ng-repeat="wid in critical">
+		<ul>
+			<h2>
+				Type: {{wid.type}} ({{critical.length}})
+			</h2>
+			<li ng-class="{'warning': wid.type == 'Critical', 'major': wid.type == 'Major'}" class="box">
+
+				<p>
+					{{wid.time}}
+				</p>
+				<h4>
+					Name: {{wid.name}}
+				</h4>
+				<p>
                     <span>
                      info1: {{wid.info1}}
                     </span>
@@ -28,12 +30,50 @@
                             <span>
                       info5: {{wid.info5}}<br>
                     </span>
-                    </p>
-                    <p>
-                        {{wid.timeCreated | time:wid.timeCreated}}
-                    </p>
-                </li>
-            </ul>
-        </div>
-    </div>
+				</p>
+				<p>
+					{{wid.timeCreated | time:wid.timeCreated}}
+				</p>
+			</li>
+		</ul>
+	</div>
+	<div >
+
+		<ul ng-repeat="wid in major">
+			<h2>
+				Type: {{wid.type}} ({{major.length}})
+			</h2>
+			<li ng-class="{'warning': wid.type == 'Critical', 'major': wid.type == 'Major'}" class="box">
+				<p>
+					{{wid.time}}
+				</p>
+				<h4>
+					Name: {{wid.name}}
+				</h4>
+				<p>
+                    <span>
+                     info1: {{wid.info1}}
+                    </span>
+                            <span>
+                     info2: {{wid.info2}} <br>
+                    </span>
+                            <span>
+                     info3: {{wid.info3}}
+                    </span>
+                            <span>
+                     info4: {{wid.info4}}<br>
+                    </span>
+                            <span>
+                      info5: {{wid.info5}}<br>
+                    </span>
+				</p>
+				<p>
+					{{wid.timeCreated | time:wid.timeCreated}}
+				</p>
+			</li>
+		</ul>
+	</div>
+
 </div>
+<!--</div>-->
+<!--</div>-->
