@@ -28,6 +28,10 @@ ul .box {
     display: none;
 }
 
+ul .pick {
+    display: none;
+}
+
 .list {
     margin: 30px;
     border: 1px solid black;
@@ -35,8 +39,17 @@ ul .box {
     width: 400px;
 }
 
+h2 {
+    display: inline;
+}
+
 ul:hover > .box {
     display: block;
+}
+
+ul:hover > .pick {
+    margin-left: 15px;
+    display: inline;
 }
 
 .warning {
