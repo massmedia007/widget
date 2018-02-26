@@ -1,48 +1,48 @@
 /* app css stylesheet */
 
 .menu {
-	list-style: none;
-	border-bottom: 0.1em solid black;
-	margin-bottom: 2em;
-	padding: 0 0 0.5em;
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
 }
 
 .menu:before {
-	content: "[";
+    content: "[";
 }
 
 .menu:after {
-	content: "]";
+    content: "]";
 }
 
 .menu > li {
-	display: inline;
+    display: inline;
 }
 
 .menu > li + li:before {
-	content: "|";
-	padding-right: 0.3em;
+    content: "|";
+    padding-right: 0.3em;
 }
 
 ul .box {
-	display: none;
+    display: none;
 }
 
-ul > h2:hover + .box {
-	display: block;
+.list {
+    margin: 30px;
+    border: 1px solid black;
+    padding: 25px;
+    width: 400px;
 }
 
-.box {
-	margin: 30px;
-	border: 1px solid black;
-	padding: 25px;
-	width: 400px;
+ul:hover > .box {
+    display: block;
 }
 
 .warning {
-	border-bottom: 3px solid darkred;
+    border-bottom: 3px solid red;
 }
 
 .major {
-	border-bottom: 3px solid orange;
+    border-bottom: 3px solid orange;
 }
