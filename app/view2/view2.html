@@ -1,5 +1,38 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div>
+    <div ng-repeat="info in person">
+        <div ng-repeat="data in info">
+            <!--<h2>Open data: {{data.Opendata}}</h2>-->
+            <h2>Closed data:</h2>
+            <div ng-repeat="about in data.Closeddata">
+                <div ng-repeat="secret in about">
+                    <h4>Secret agent: <br></h4>
+                    <span>country: {{secret.country}}</span> <br>
+                    <span>since: {{secret.since}}</span><br>
+                    <span>rank: {{secret.rank}}</span><br>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--{-->
+<!--"Person"-->
+<!--:-->
+<!--[{-->
+<!--"Opendata": {-->
+<!--"About": {-->
+<!--"Somedata": {-->
+<!--"Weight": [{"ru": 80, "eng": 176.4}],-->
+<!--"Height": [{"ru": 180, "eng": 5.11}],-->
+<!--"Fullname": {"Name": "Ivan", "Surname": "Petrov", "Midname": null}-->
+<!--}, "Otherdate": null-->
+<!--},-->
+<!--"Habits": [{"goodhabits": {"habit1": "reading", "habit2": "swimming"}, "badhabits": {"habit1": null}}]-->
+<!--},-->
+<!--"Closeddata": {"About": {"secretagent": {"country": "Ukraine", "since": 2000, "rank": null}}}-->
+<!--}-->
+<!--]-->
+<!--}-->
