@@ -10,7 +10,8 @@
                     <option>text2</option>
                     <option>text3</option>
                 </select>
-                <p>{{max}} time ago</p>
+                <!--<p>{{widd.max}} time ago</p>-->
+                <p>{{widd.max | time:widd.max}}</p>
                 <li ng-repeat="wid in widd" class="box">
                     <p>
                         {{wid.time}}
